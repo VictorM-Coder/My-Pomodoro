@@ -1,0 +1,28 @@
+.font-logo {
+  font-size: 24px;
+}
+
+.link-logo {
+  color: white;
+  text-decoration: none;
+}
+
+.padding-header {
+  padding: 16px 0;
+}
+
+.btn-settings {
+  font-size: 20px;
+  color: white;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-settings:hover {
+  color: #E0C8F9;
+}
+
+.btn-text {
+  margin-left: 4px;
+}
