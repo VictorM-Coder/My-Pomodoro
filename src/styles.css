@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
+:root{
+  --primary-50: #E0C8F9;
+  --font-default: 'Lato', sans-serif;
+}
 body {
   background-color: #F5EBFF;
 }
@@ -8,12 +12,24 @@ body {
   background-color: #410D76;
 }
 
+.background-white{
+  background-color: white;
+}
+
 .white-font-color {
   color: white;
 }
 
 .font-medium{
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-default);
   font-weight: 700;
+}
+
+.default-border-radius{
+  border-radius: 8px;
+}
+
+.mg-right-20{
+  margin-right: 20px;
 }
 

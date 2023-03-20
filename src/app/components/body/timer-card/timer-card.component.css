@@ -1,0 +1,14 @@
+.btn-pomodoro{
+  background-color: transparent;
+  padding: 4px 8px;
+  border: none;
+  font: normal 700 20px 'Lato';
+}
+
+.btn-pomodoro:hover{
+  background-color: var(--primary-50);
+}
+
+.card-padding{
+  padding: 32px;
+}
