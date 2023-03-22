@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
+
 :root{
+  --primary-900: #410D76;
   --primary-50: #E0C8F9;
   --font-default: 'Lato', sans-serif;
 }
@@ -31,5 +33,9 @@ body {
 
 .mg-right-20{
   margin-right: 20px;
+}
+
+.mg-top-32{
+  margin-top: 32px;
 }
 

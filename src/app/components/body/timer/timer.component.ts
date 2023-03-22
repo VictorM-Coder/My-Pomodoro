@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-timer',
@@ -6,9 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./timer.component.css']
 })
 export class TimerComponent {
-  minutes:number = 1;
-  seconds:number = 0;
+  @Input() totalMinutes:number = 25;
+  @Input() totalSeconds:number = 0;
+  minutes:number;
+  seconds:number;
   timeout:any;
+
+  constructor() {
+    this.minutes = this.totalMinutes;
+    this.seconds = this.totalSeconds;
+  }
   decrementSeconds(){
     if (this.seconds === 0){
       if (this.minutes >= 1) this.seconds = 59
@@ -23,9 +30,15 @@ export class TimerComponent {
     else this.minutes--
   }
 
-  ngAfterViewInit(){
+  @Output() startTimer = () => {
     this.timeout = setInterval(() => {
       this.decrementSeconds()
     }, 1000)
+  }
+
+  getProgressPercent(){
+    let totalTimeInSeconds = this.totalMinutes * 60 + this.totalSeconds;
+    let elapsedTimeInSeconds = this.minutes * 60 + this.seconds;
+    return 100 - (100 * elapsedTimeInSeconds/totalTimeInSeconds)
   }
 }

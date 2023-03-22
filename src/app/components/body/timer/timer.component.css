@@ -1,0 +1,19 @@
+.progress-background{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.progress-foreground{
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.timer-numbers{
+  font-family: var(--font-default);
+  font-size: 48px;
+  color: var(--primary-900);
+  font-weight: 700;
+}
