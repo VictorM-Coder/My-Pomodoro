@@ -1,13 +1,13 @@
 <div class="d-flex align-items-center justify-content-center mg-top-32">
   <div class="d-flex background-darker progress-background align-items-center justify-content-center"
-       [ngStyle]="{'background': 'conic-gradient(var(--primary-900) ' + percentComplete + '%, var(--primary-50) 0deg)'}">
+       [ngStyle]="{'background': 'conic-gradient(var(--primary-900) ' + getProgressPercent() + '%, var(--primary-50) 0deg)'}">
     <div class="d-flex background-white progress-foreground align-items-center justify-content-center">
       <time class="timer-numbers">{{minutes}}:{{seconds}}</time>
     </div>
   </div>
 </div>
 <div class="d-flex mg-top-32 justify-content-between">
-  <button class="btn-system">
+  <button (click)="restart()" class="btn-system">
     <span class="material-symbols-rounded">replay</span>
   </button>
   <button (click)="startPause()" class="btn-system btn-start" [innerText]="timerRunning?'pause': 'start'"></button>
