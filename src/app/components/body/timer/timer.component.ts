@@ -1,4 +1,5 @@
-import {Component, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
+import {TimePomodoro} from "../../../model/time-pomodoro";
 
 @Component({
   selector: 'app-timer',
@@ -6,17 +7,43 @@ import {Component, Input, Output} from '@angular/core';
   styleUrls: ['./timer.component.css']
 })
 export class TimerComponent {
-  @Input() totalMinutes:number = 25;
-  @Input() totalSeconds:number = 0;
-  minutes:number;
-  seconds:number;
-  timeout:any;
+  @Input() pomodoro: TimePomodoro = TimePomodoro.POMODORO;
+  minutes:number = this.pomodoro;
+  seconds:number = 0;
+  percentComplete:number = 0;
+  timerInterval:any;
+  timerRunning:boolean = false;
 
-  constructor() {
-    this.minutes = this.totalMinutes;
-    this.seconds = this.totalSeconds;
+  @Output() changeStateTimer = new EventEmitter<any>();
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.minutes = this.pomodoro;
+    this.seconds = 0;
+    this.percentComplete = 0;
+    if (this.timerInterval){
+      clearInterval(this.timerInterval);
+    }
   }
-  decrementSeconds(){
+  startTimer = () => {
+    this.minutes = this.pomodoro
+
+    this.timerInterval = setInterval(() => {
+      if (this.timerRunning){
+        this.decrementSeconds();
+        this.percentComplete = this.getProgressPercent();
+      }
+    }, 1000)
+  }
+
+  startPause(){
+    this.changeStateTimer.emit()
+    this.timerRunning = !this.timerRunning;
+    if (this.percentComplete === 0 && this.timerRunning){
+      this.startTimer()
+    }
+  }
+
+  private decrementSeconds(){
     if (this.seconds === 0){
       if (this.minutes >= 1) this.seconds = 59
       this.decrementMinutes()
@@ -25,19 +52,12 @@ export class TimerComponent {
     }
   }
 
-  decrementMinutes(){
-    if (this.minutes === 0 && this.seconds === 0) clearInterval(this.timeout)
+  private decrementMinutes(){
+    if (this.minutes === 0 && this.seconds === 0) clearInterval(this.timerInterval)
     else this.minutes--
   }
-
-  @Output() startTimer = () => {
-    this.timeout = setInterval(() => {
-      this.decrementSeconds()
-    }, 1000)
-  }
-
-  getProgressPercent(){
-    let totalTimeInSeconds = this.totalMinutes * 60 + this.totalSeconds;
+  private getProgressPercent(){
+    let totalTimeInSeconds = this.pomodoro * 60;
     let elapsedTimeInSeconds = this.minutes * 60 + this.seconds;
     return 100 - (100 * elapsedTimeInSeconds/totalTimeInSeconds)
   }
