@@ -43,3 +43,23 @@ body {
   margin-top: 32px;
 }
 
+.btn-system{
+  background: linear-gradient(to bottom, #5B12A3, #410D76);
+  color: white;
+  font-family: var(--font-default);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 3.6px;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-system:hover{
+  background: linear-gradient(to bottom, #551199, #390b66);
+  color: #e6e6e6;
+}

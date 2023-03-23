@@ -1,8 +1,17 @@
-<div class="d-flex background-darker progress-background align-items-center justify-content-center"
-     [ngStyle]="{'background': 'conic-gradient(var(--primary-900) ' + percentComplete + '%, var(--primary-50) 0deg)'}">
-  <div class="d-flex background-white progress-foreground align-items-center justify-content-center">
-    <time class="timer-numbers">{{minutes}}:{{seconds}}</time>
+<div class="d-flex align-items-center justify-content-center mg-top-32">
+  <div class="d-flex background-darker progress-background align-items-center justify-content-center"
+       [ngStyle]="{'background': 'conic-gradient(var(--primary-900) ' + percentComplete + '%, var(--primary-50) 0deg)'}">
+    <div class="d-flex background-white progress-foreground align-items-center justify-content-center">
+      <time class="timer-numbers">{{minutes}}:{{seconds}}</time>
+    </div>
   </div>
 </div>
-
-<button (click)="startPause()" class="btn-start mg-top-32" [innerText]="timerRunning?'pause': 'start'"></button>
+<div class="d-flex mg-top-32 justify-content-between">
+  <button class="btn-system">
+    <span class="material-symbols-rounded">replay</span>
+  </button>
+  <button (click)="startPause()" class="btn-system btn-start" [innerText]="timerRunning?'pause': 'start'"></button>
+  <button class="btn-system">
+    <span class="material-symbols-rounded">skip_next</span>
+  </button>
+</div>

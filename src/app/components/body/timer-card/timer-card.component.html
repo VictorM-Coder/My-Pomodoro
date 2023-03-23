@@ -10,7 +10,5 @@
       <button (click)="setLongBreak()" [disabled]="disableButtons" class="btn-pomodoro default-border-radius">Long break</button>
     </span>
   </div>
-  <div class="d-flex align-items-center justify-content-center mg-top-32">
-    <app-timer [pomodoro]="timePomodoro" (changeStateTimer)="onStateChanceTimer()"></app-timer>
-  </div>
+  <app-timer [pomodoro]="timePomodoro" (changeStateTimer)="onStateChanceTimer()"></app-timer>
 </div>

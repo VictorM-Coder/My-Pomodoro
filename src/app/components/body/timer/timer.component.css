@@ -19,15 +19,5 @@
 }
 
 .btn-start{
-  background: linear-gradient(to bottom, #5B12A3, #410D76);
-  color: white;
-  font-family: var(--font-default);
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: 3.6px;
-  border: none;
-  border-radius: 8px;
-  text-transform: uppercase;
   width: 200px;
-  padding: 4px 8px;
 }
