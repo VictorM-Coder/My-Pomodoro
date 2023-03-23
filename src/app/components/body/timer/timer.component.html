@@ -5,4 +5,4 @@
   </div>
 </div>
 
-<button (click)="startPause()">start</button>
+<button (click)="startPause()" class="btn-start mg-top-32" [innerText]="timerRunning?'pause': 'start'"></button>
