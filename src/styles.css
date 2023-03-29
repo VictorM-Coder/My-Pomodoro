@@ -72,3 +72,7 @@ body {
   background: linear-gradient(to bottom, #551199, #390b66);
   color: #e6e6e6;
 }
+
+.defult-shadow{
+  box-shadow: 0px 4px 4px rgba(65, 13, 118, 0.1);
+}
