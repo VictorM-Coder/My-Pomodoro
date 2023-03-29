@@ -6,6 +6,15 @@
   --primary-50: #E0C8F9;
   --font-default: 'Lato', sans-serif;
 }
+
+h1 {
+  font-family: var(--font-default);
+  color: var(--primary-900);
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0px;
+}
+
 body {
   background-color: #F5EBFF;
 }
