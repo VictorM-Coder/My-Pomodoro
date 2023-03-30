@@ -40,6 +40,17 @@ body {
   border-radius: 8px;
 }
 
+.task-title{
+  font-family: var(--font-default);
+  color: var(--primary-900);
+  font-size: 1.2em;
+}
+
+.mg-left-12{
+  margin-left: 12px;
+}
+
+
 .mg-right-20{
   margin-right: 20px;
 }
