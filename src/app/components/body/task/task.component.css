@@ -1,0 +1,16 @@
+.task{
+  padding: 8px 20px;
+  margin-top: 20px;
+}
+
+.icon-task{
+  font-size: 1.5em;
+  color: var(--primary-900);
+}
+
+.task-title{
+  font-family: var(--font-default);
+  color: var(--primary-900);
+  font-size: 1.2em;
+  margin-left: 12px;
+}

@@ -5,6 +5,7 @@ import {BodyComponent} from "./body/body/body.component";
 import {TimerCardComponent} from "./body/timer-card/timer-card.component";
 import { TimerComponent } from './body/timer/timer.component';
 import { TaskBarComponent } from './body/task-bar/task-bar.component';
+import { TaskComponent } from './body/task/task.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { TaskBarComponent } from './body/task-bar/task-bar.component';
     BodyComponent,
     TimerCardComponent,
     TimerComponent,
-    TaskBarComponent
+    TaskBarComponent,
+    TaskComponent
   ],
   imports: [
     CommonModule
