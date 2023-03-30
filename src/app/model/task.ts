@@ -1,9 +1,9 @@
 export class Task {
   private _name:string;
-  private _isComplete:boolean;
+  public isComplete:boolean;
   constructor(name:string) {
     this._name = name;
-    this._isComplete = false;
+    this.isComplete = false;
   }
 
   get name (){
@@ -12,13 +12,5 @@ export class Task {
 
   set name(name:string){
     this._name = name;
-  }
-
-  public complete(){
-    this._isComplete = true;
-  }
-
-  public uncomplete(){
-    this._isComplete = false;
   }
 }

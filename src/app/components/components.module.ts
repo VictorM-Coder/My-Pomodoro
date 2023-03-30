@@ -6,6 +6,7 @@ import {TimerCardComponent} from "./body/timer-card/timer-card.component";
 import { TimerComponent } from './body/timer/timer.component';
 import { TaskBarComponent } from './body/task-bar/task-bar.component';
 import { TaskComponent } from './body/task/task.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -17,9 +18,10 @@ import { TaskComponent } from './body/task/task.component';
     TaskBarComponent,
     TaskComponent
   ],
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule
+    ],
   exports: [
     HeaderComponent,
     BodyComponent
