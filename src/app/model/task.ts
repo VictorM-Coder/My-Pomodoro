@@ -1,23 +1,11 @@
 export class Task {
   private static idCounter:number = 0;
-  private readonly _id:number;
-  private _name:string;
+  public id:number;
+  public name:string;
   public isComplete:boolean;
   constructor(name:string) {
-    this._id = Task.idCounter++;
-    this._name = name;
+    this.id = Task.idCounter++;
+    this.name = name;
     this.isComplete = false;
-  }
-
-  get name (){
-    return this._name;
-  }
-
-  set name(name:string){
-    this._name = name;
-  }
-
-  get id(){
-    return this._id;
   }
 }
