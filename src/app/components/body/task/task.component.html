@@ -1,24 +1,32 @@
 <div class="background-white default-border-radius defult-shadow task d-flex justify-content-between align-items-center">
   <div class="d-flex align-items-center">
-    <input (click)="mostrar()"  [(ngModel)]="task.isComplete" class="form-check-input icon-task  m-0" type="checkbox">
-    <label class="form-check-label task-title mg-left-12">
+    <input [id]="task.id" (click)="mostrar()"  [(ngModel)]="task.isComplete" class="form-check-input icon-task  m-0" type="checkbox">
+    <label [for]="task.id" class="form-check-label task-title mg-left-12" style="max-width: 90%">
       {{task.name}}
     </label>
   </div>
   <div class="d-flex align-items-center">
-    <span class="material-symbols-rounded icon-task mg-right-20">
-      edit
-    </span>
-    <span class="material-symbols-rounded icon-task mg-right-20">
-      delete_forever
-    </span>
+    <button class="btn-icon mg-right-20">
+      <span class="material-symbols-rounded icon-task">
+        edit
+      </span>
+    </button>
+
+    <button class="btn-icon mg-right-20">
+       <span class="material-symbols-rounded icon-task">
+        delete_forever
+      </span>
+    </button>
     <div class="d-grid">
-      <span class="material-symbols-rounded icon-task">
-        keyboard_arrow_up
-      </span>
-      <span class="material-symbols-rounded icon-task">
-        keyboard_arrow_down
-      </span>
+      <button class="btn-icon">
+        <span class="material-symbols-rounded icon-task">
+          keyboard_arrow_up
+        </span>
+      </button>
+
+      <button class="btn-icon">
+        <span class="material-symbols-rounded icon-task">keyboard_arrow_down</span>
+      </button>
     </div>
   </div>
 </div>

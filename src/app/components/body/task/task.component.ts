@@ -8,7 +8,7 @@ import {Task} from "../../../model/task";
 })
 export class TaskComponent {
   @Input() public task:Task = new Task("");
-
+  @Input() public idTask:number = 0;
   mostrar(){
     console.log(this.task)
   }
