@@ -19,8 +19,14 @@ export class TaskBarComponent {
   }
 
   completeTask(task:Task){
-    console.log(task)
     this.taskRepository.update(task);
+  }
+
+  deleteTask(task:Task){
+    let taskIndex = this.listTasks.indexOf(task)
+    this.listTasks.splice(taskIndex, 1);
+    console.log(this.listTasks)
+    this.taskRepository.delete(task);
   }
 
   public addTask(){

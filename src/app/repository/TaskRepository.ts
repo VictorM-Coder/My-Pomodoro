@@ -25,8 +25,14 @@ export class TaskRepository{
   }
 
   public update(task:Task){
-    if (typeof task.id === 'number') {
-      if (this.getById(task.id)) this.persistTask(task);
+    if (this.taskExists(task.id)) {
+      this.persistTask(task);
+    }
+  }
+
+  public delete(task:Task){
+    if (this.taskExists(task.id)){
+      localStorage.removeItem(this.prefix+task.id);
     }
   }
 
@@ -48,5 +54,9 @@ export class TaskRepository{
   private getById(id:number){
     const task = localStorage.getItem(this.prefix+id);
     if (task) return JSON.parse(task);
+  }
+
+  private taskExists(id:number | undefined){
+    return (typeof id === 'number') && this.getById(id);
   }
 }
