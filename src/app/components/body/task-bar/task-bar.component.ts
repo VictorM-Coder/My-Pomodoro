@@ -31,7 +31,6 @@ export class TaskBarComponent {
 
   public addTask(){
     const value = document.getElementById("recipient-name") as HTMLInputElement | null;
-    const modal = document.getElementById('exampleModal') as HTMLInputElement | null;
     if (typeof (value?.value) === "string"){
       let task = new Task(value.value);
       this.listTasks.push(task);
