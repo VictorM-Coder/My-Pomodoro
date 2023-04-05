@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Task} from "../../../model/task";
 
 @Component({
@@ -9,8 +9,10 @@ import {Task} from "../../../model/task";
 export class TaskComponent {
   @Input() public task:Task = new Task("");
   @Input() public idTask:number = 0;
-  mostrar(){
-    console.log(this.task)
+  @Output() listenCompleteTask = new EventEmitter();
+  completeTask(){
+    this.task.isComplete = !this.task.isComplete
+    this.listenCompleteTask.emit(this.task);
   }
 
 }

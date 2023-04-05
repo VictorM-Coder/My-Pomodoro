@@ -18,12 +18,18 @@ export class TaskBarComponent {
     this.listTasks = this.taskRepository.getAll();
   }
 
+  completeTask(task:Task){
+    console.log(task)
+    this.taskRepository.update(task);
+  }
+
   public addTask(){
     const value = document.getElementById("recipient-name") as HTMLInputElement | null;
     const modal = document.getElementById('exampleModal') as HTMLInputElement | null;
     if (typeof (value?.value) === "string"){
-      this.listTasks.push(new Task(value.value))
-      this.taskRepository.save(this.listTasks)
+      let task = new Task(value.value);
+      this.listTasks.push(task);
+      this.taskRepository.save(task)
       value.value = "";
     }
     this.cancelButton?.nativeElement.click();

@@ -1,6 +1,6 @@
 <div class="background-white default-border-radius defult-shadow task d-flex justify-content-between align-items-center">
   <div class="d-flex align-items-center">
-    <input [id]="task.id" (click)="mostrar()"  [(ngModel)]="task.isComplete" class="form-check-input icon-task  m-0" type="checkbox">
+    <input [id]="task.id" [ngModel]="task.isComplete" (click)="completeTask()" class="form-check-input icon-task  m-0" type="checkbox">
     <label [for]="task.id" class="form-check-label task-title mg-left-12" style="max-width: 90%">
       {{task.name}}
     </label>
