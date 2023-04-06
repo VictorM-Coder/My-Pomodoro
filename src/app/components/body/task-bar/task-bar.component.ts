@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Task} from "../../../model/task";
 import { ViewChild, ElementRef} from '@angular/core';
 import {TaskRepository} from "../../../repository/TaskRepository";
+import {Modal} from "bootstrap";
 
 @Component({
   selector: 'app-task-bar',
