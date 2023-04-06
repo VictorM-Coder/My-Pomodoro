@@ -39,4 +39,8 @@ export class TaskBarComponent {
     }
     this.cancelButton?.nativeElement.click();
   }
+
+  public editTask(task:Task){
+
+  }
 }

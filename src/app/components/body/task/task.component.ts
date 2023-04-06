@@ -11,6 +11,7 @@ export class TaskComponent {
   @Input() public idTask:number = 0;
   @Output() listenCompleteTask = new EventEmitter();
   @Output() listenDeleteTask = new EventEmitter();
+  @Output() listenEditTask = new EventEmitter();
 
   completeTask(){
     this.task.isComplete = !this.task.isComplete
@@ -18,8 +19,11 @@ export class TaskComponent {
   }
 
   deleteTask(){
-    console.log("delete")
     this.listenDeleteTask.emit(this.task);
+  }
+
+  editTask(){
+    this.listenEditTask.emit(this.task)
   }
 
 }
