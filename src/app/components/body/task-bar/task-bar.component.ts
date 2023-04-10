@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {Task} from "../../../model/task";
 import { ViewChild, ElementRef} from '@angular/core';
 import {TaskRepository} from "../../../repository/TaskRepository";
-import {Modal} from "bootstrap";
+import { Modal } from "bootstrap";
 
 @Component({
   selector: 'app-task-bar',
@@ -10,9 +10,14 @@ import {Modal} from "bootstrap";
   styleUrls: ['./task-bar.component.css']
 })
 export class TaskBarComponent {
+  task:Task = new Task("");
   listTasks: Array<Task> = [];
   taskRepository:TaskRepository;
-  @ViewChild('cancelButton') cancelButton: ElementRef | undefined;
+  @ViewChild('cancelButtonAdd') cancelButtonAdd: ElementRef | undefined;
+  @ViewChild('cancelButtonEdit') cancelButtonEdit: ElementRef | undefined;
+  @ViewChild('editInput') editInput: ElementRef | undefined;
+  @ViewChild('addInput') addInput: ElementRef | undefined;
+
 
   constructor() {
     this.taskRepository = new TaskRepository();
@@ -26,22 +31,29 @@ export class TaskBarComponent {
   deleteTask(task:Task){
     let taskIndex = this.listTasks.indexOf(task)
     this.listTasks.splice(taskIndex, 1);
-    console.log(this.listTasks)
     this.taskRepository.delete(task);
   }
 
   public addTask(){
-    const value = document.getElementById("recipient-name") as HTMLInputElement | null;
-    if (typeof (value?.value) === "string"){
-      let task = new Task(value.value);
-      this.listTasks.push(task);
-      this.taskRepository.save(task)
-      value.value = "";
-    }
-    this.cancelButton?.nativeElement.click();
+    let task = new Task(this.addInput?.nativeElement.value);
+    this.listTasks.push(task);
+    this.taskRepository.save(task)
+
+    if(this.addInput) this.addInput.nativeElement.value =  "";
+    this.cancelButtonAdd?.nativeElement.click();
   }
 
   public editTask(task:Task){
+    const element = document.getElementById('modalEdit') as HTMLElement;
+    const myModal = new Modal(element);
+    this.task = task
+    myModal.show();
+  }
 
+  public confirmEdit(){
+    this.task.name = this.editInput?.nativeElement.value;
+    this.taskRepository.update(this.task);
+    this.cancelButtonEdit?.nativeElement.click();
+    this.task = new Task("");
   }
 }

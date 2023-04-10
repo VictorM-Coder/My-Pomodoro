@@ -36,15 +36,40 @@
 
         <form>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Task Name:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="recipientName" class="col-form-label">Task Name:</label>
+            <input type="text" class="form-control" id="recipientName" [value]="task.name" name="recipientName" #addInput>
           </div>
         </form>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" #cancelButton>Cancel</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" #cancelButtonAdd>Cancel</button>
         <button type="button" class="btn btn-primary" (click)="addTask()">Add Task</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalAdd" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditLabel">Edit a task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+          <div class="mb-3">
+            <label for="recipientNameEdit" class="col-form-label">Task Name:</label>
+            <input type="text" class="form-control" id="recipientNameEdit" [value]="task.name" #editInput>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" #cancelButtonEdit>Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="confirmEdit()">Add Task</button>
       </div>
     </div>
   </div>
