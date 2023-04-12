@@ -56,4 +56,24 @@ export class TaskBarComponent {
     this.cancelButtonEdit?.nativeElement.click();
     this.task = new Task("");
   }
+
+  public upTaskPosition(task:Task){
+    this.changeItemsPosition(task, -1);
+  }
+
+  public downTaskPosition(task:Task){
+    this.changeItemsPosition(task, 1);
+  }
+
+  private changeItemsPosition(task:Task, value:number){
+    let indexOf = this.listTasks.indexOf(task);
+
+    if (this.listTasks[indexOf+value]){
+      let taskTemp = this.listTasks.at(indexOf+value);
+      this.listTasks[indexOf+value] = task;
+      if (taskTemp) {
+        this.listTasks[indexOf] = taskTemp
+      }
+    }
+  }
 }

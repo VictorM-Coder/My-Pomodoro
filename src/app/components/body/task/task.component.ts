@@ -13,6 +13,9 @@ export class TaskComponent {
   @Output() listenDeleteTask = new EventEmitter();
   @Output() listenEditTask = new EventEmitter();
 
+  @Output() listenUpTask = new EventEmitter();
+  @Output() listDownTask = new EventEmitter();
+
   completeTask(){
     this.task.isComplete = !this.task.isComplete
     this.listenCompleteTask.emit(this.task);
@@ -23,7 +26,15 @@ export class TaskComponent {
   }
 
   editTask(){
-    this.listenEditTask.emit(this.task)
+    this.listenEditTask.emit(this.task);
+  }
+
+  upPosition(){
+    this.listenUpTask.emit(this.task);
+  }
+
+  downPosition(){
+    this.listDownTask.emit(this.task);
   }
 
 }

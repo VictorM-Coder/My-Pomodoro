@@ -10,7 +10,7 @@
     </div>
 
     <div class="col-12" *ngFor="let task of listTasks">
-      <app-task [task]="task"  (listenCompleteTask)="completeTask($event)" (listenDeleteTask)="deleteTask($event)" (listenEditTask)="editTask($event)"></app-task>
+      <app-task [task]="task"  (listenCompleteTask)="completeTask($event)" (listenDeleteTask)="deleteTask($event)" (listenEditTask)="editTask($event)" (listDownTask)="downTaskPosition($event)" (listenUpTask)="upTaskPosition($event)"></app-task>
     </div>
 
     <div class="col-12 mg-top-20 task-title">
