@@ -7,22 +7,28 @@ import {TimePomodoro} from "../../../model/time-pomodoro";
   styleUrls: ['./timer-card.component.css']
 })
 export class TimerCardComponent {
-  timePomodoro:TimePomodoro = TimePomodoro.POMODORO;
+  private timePomodoro:TimePomodoro;
+  valuePomodoro:number;
   disableButtons:boolean = false;
+
+  constructor() {
+    this.timePomodoro = new TimePomodoro();
+    this.valuePomodoro = this.timePomodoro.getPomodoroValue()
+  }
 
   onStateChanceTimer(){
     this.disableButtons = !this.disableButtons;
   }
 
   setPomodoro(){
-    this.timePomodoro = TimePomodoro.POMODORO;
+    this.valuePomodoro = this.timePomodoro.getPomodoroValue();
   }
 
   setLongBreak(){
-    this.timePomodoro = TimePomodoro.LONG_BREAK;
+    this.valuePomodoro = this.timePomodoro.getLongBreakValue();
   }
 
   setShortBreak(){
-    this.timePomodoro = TimePomodoro.SHORT_BREAK;
+    this.valuePomodoro = this.timePomodoro.getShortBreakValue();
   }
 }

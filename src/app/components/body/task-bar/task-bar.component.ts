@@ -3,6 +3,7 @@ import {Task} from "../../../model/task";
 import { ViewChild, ElementRef} from '@angular/core';
 import {TaskRepository} from "../../../repository/TaskRepository";
 import { Modal } from "bootstrap";
+import {TimePomodoro} from "../../../model/time-pomodoro";
 
 @Component({
   selector: 'app-task-bar',

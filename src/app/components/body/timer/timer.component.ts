@@ -7,8 +7,8 @@ import {TimePomodoro} from "../../../model/time-pomodoro";
   styleUrls: ['./timer.component.css']
 })
 export class TimerComponent {
-  @Input() pomodoro: TimePomodoro = TimePomodoro.POMODORO;
-  minutes:number = this.pomodoro;
+  @Input() pomodoroValue:number = 25;
+  minutes:number = this.pomodoroValue;
   seconds:number = 0;
   timerInterval:any;
   timerRunning:boolean = false;
@@ -20,7 +20,7 @@ export class TimerComponent {
   }
 
   getProgressPercent(){
-    return 100 - (100 * (this.minutes * 60 + this.seconds)/(this.pomodoro * 60))
+    return 100 - (100 * (this.minutes * 60 + this.seconds)/(this.pomodoroValue * 60))
   }
 
   restart(){
@@ -38,7 +38,7 @@ export class TimerComponent {
   }
 
   private startTimer = () => {
-    this.minutes = this.pomodoro
+    this.minutes = this.pomodoroValue
     this.timerInterval = setInterval(() => {
       if (this.timerRunning) this.decrementTime();
     }, 1000)
@@ -60,7 +60,7 @@ export class TimerComponent {
   }
 
   private resetTimer(){
-    this.minutes = this.pomodoro;
+    this.minutes = this.pomodoroValue;
     this.seconds = 0;
     if (this.timerInterval){
       clearInterval(this.timerInterval);
