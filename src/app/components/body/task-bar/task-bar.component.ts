@@ -3,7 +3,7 @@ import {Task} from "../../../model/task";
 import { ViewChild, ElementRef} from '@angular/core';
 import {TaskRepository} from "../../../repository/TaskRepository";
 import { Modal } from "bootstrap";
-import {TimePomodoro} from "../../../model/time-pomodoro";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-task-bar',
@@ -18,11 +18,26 @@ export class TaskBarComponent {
   @ViewChild('cancelButtonEdit') cancelButtonEdit: ElementRef | undefined;
   @ViewChild('editInput') editInput: ElementRef | undefined;
   @ViewChild('addInput') addInput: ElementRef | undefined;
+  @ViewChild('modalAdd', {static: true}) modalAdd!: ElementRef<HTMLDivElement>
+  @ViewChild('modalEdit', {static: true}) modalEdit!: ElementRef<HTMLDivElement>
+  formAdd: FormGroup = new FormGroup({
+    taskNameInput: new FormControl("")
+  });
+
+  formEdit: FormGroup = new FormGroup({
+    taskNameEditInput: new FormControl(this.task.name)
+  });
 
 
   constructor() {
     this.taskRepository = new TaskRepository();
     this.listTasks = this.taskRepository.getAll();
+  }
+
+  ngAfterViewInit(){
+    this.modalAdd.nativeElement.addEventListener('hidden.bs.modal', () => {
+      this.formAdd.reset({});
+    });
   }
 
   completeTask(task:Task){
@@ -48,6 +63,9 @@ export class TaskBarComponent {
     const element = document.getElementById('modalEdit') as HTMLElement;
     const myModal = new Modal(element);
     this.task = task
+    this.formEdit.reset({
+      taskNameEditInput: this.task.name
+    });
     myModal.show();
   }
 

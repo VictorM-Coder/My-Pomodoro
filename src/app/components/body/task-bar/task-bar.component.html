@@ -25,7 +25,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="modalAdd" tabindex="-1" aria-labelledby="modalAdd" aria-hidden="true">
+<div class="modal fade" id="modalAdd" #modalAdd tabindex="-1" aria-labelledby="modalAdd" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -34,10 +34,10 @@
       </div>
       <div class="modal-body">
 
-        <form>
+        <form [formGroup]="formAdd">
           <div class="mb-3">
             <label for="recipientName" class="col-form-label">Task Name:</label>
-            <input type="text" class="form-control" id="recipientName" [value]="task.name" name="recipientName" #addInput>
+            <input type="text" formControlName="taskNameInput" class="form-control" id="recipientName" name="recipientName" #addInput>
           </div>
         </form>
 
@@ -50,7 +50,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalAdd" aria-hidden="true">
+<div class="modal fade" #modalEdit id="modalEdit" tabindex="-1" aria-labelledby="modalAdd" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -59,10 +59,10 @@
       </div>
       <div class="modal-body">
 
-        <form>
+        <form [formGroup]="formEdit">
           <div class="mb-3">
             <label for="recipientNameEdit" class="col-form-label">Task Name:</label>
-            <input type="text" class="form-control" id="recipientNameEdit" [value]="task.name" #editInput>
+            <input formControlName="taskNameEditInput" type="text" class="form-control" id="recipientNameEdit" #editInput>
           </div>
         </form>
 
