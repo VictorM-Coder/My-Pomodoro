@@ -28,24 +28,24 @@
         <form [formGroup]="formSettings" class="row">
           <div class="col mb-3">
             <label for="pomodoro-input" class="col-form-label">Pomodoro:</label>
-            <input formControlName="pomodoroInput" type="number" min="1" class="form-control" id="pomodoro-input">
+            <input #pomodoroInput formControlName="pomodoroInput" type="number" min="1" class="form-control" id="pomodoro-input">
           </div>
 
           <div class="col mb-3">
             <label for="shortbreak-input" class="col-form-label">Short Break:</label>
-            <input formControlName="shortBreakInput" type="number" min="1" class="form-control" id="shortbreak-input">
+            <input #shortBreakInput formControlName="shortBreakInput" type="number" min="1" class="form-control" id="shortbreak-input">
           </div>
 
           <div class="col mb-3">
             <label for="longbreak-input" class="col-form-label">Long Break:</label>
-            <input formControlName="longBreakInput" type="number" min="1" class="form-control" id="longbreak-input">
+            <input #longBreakInput formControlName="longBreakInput" type="number" min="1" class="form-control" id="longbreak-input">
           </div>
 
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="clearModal()">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button #cancelModal type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="clearModal()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="saveChanges()">Save changes</button>
       </div>
     </div>
   </div>

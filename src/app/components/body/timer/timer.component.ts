@@ -24,8 +24,8 @@ export class TimerComponent {
   }
 
   restart(){
+    this.resetTimer();
     if (this.timerRunning){
-      this.resetTimer();
       this.changeStateTimerAndEmitEvent();
     }
   }
