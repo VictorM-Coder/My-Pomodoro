@@ -11,7 +11,7 @@ import {TypePomodoro} from "../../../model/TypePomodoro";
 export class TimerCardComponent {
   @ViewChild('timerComponent', {static: true}) timerComponent!: TimerComponent;
   private timePomodoro:TimePomodoro;
-  private typePomodoro: TypePomodoro;
+  typePomodoro: TypePomodoro;
   valuePomodoro:number;
   disableButtons:boolean = false;
 

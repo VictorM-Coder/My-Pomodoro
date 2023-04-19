@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
-import {TimePomodoro} from "../../../model/time-pomodoro";
 
 @Component({
   selector: 'app-timer',

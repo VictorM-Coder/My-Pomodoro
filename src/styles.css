@@ -67,6 +67,34 @@ body {
   margin-top: 32px;
 }
 
+.modal-title, .col-form-label{
+  color: var(--primary-900);
+}
+
+.btn-secondary{
+  background: white;
+  font-family: var(--font-default);
+  color: var(--primary-900);
+  border: var(--primary-900) solid 1px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+}
+
+.btn-secondary:hover{
+  background-color: var(--primary-900);
+  color: white;
+}
+
+.btn-primary{
+  background: linear-gradient(to bottom, #5B12A3, #410D76);
+  font-family: var(--font-default);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+}
+
 .btn-system{
   background: linear-gradient(to bottom, #5B12A3, #410D76);
   color: white;
@@ -81,6 +109,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-primary:hover{
+  background: linear-gradient(to bottom, #551199, #390b66);
+  color: #e6e6e6;
 }
 
 .btn-system:hover{

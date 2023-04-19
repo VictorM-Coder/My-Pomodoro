@@ -1,13 +1,13 @@
 <div class="background-white defult-shadow d-flex flex-column default-border-radius card-padding">
   <div class="d-flex justify-content-center">
     <span>
-      <button (click)="setPomodoro()" [disabled]="disableButtons" class="btn-pomodoro mg-right-20 default-border-radius">Pomodoro</button>
+      <button (click)="setPomodoro()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===0"  [disabled]="disableButtons" class="btn-pomodoro mg-right-20 default-border-radius">Pomodoro</button>
     </span>
     <span>
-      <button (click)="setShortBreak()" [disabled]="disableButtons" class="btn-pomodoro mg-right-20 default-border-radius">Short break</button>
+      <button (click)="setShortBreak()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===1" [disabled]="disableButtons" class="btn-pomodoro mg-right-20 default-border-radius">Short break</button>
     </span>
     <span>
-      <button (click)="setLongBreak()" [disabled]="disableButtons" class="btn-pomodoro default-border-radius">Long break</button>
+      <button (click)="setLongBreak()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===2" [disabled]="disableButtons" class="btn-pomodoro default-border-radius">Long break</button>
     </span>
   </div>
   <app-timer #timerComponent [pomodoroValue]="valuePomodoro" (changeStateTimer)="onStateChanceTimer()"></app-timer>

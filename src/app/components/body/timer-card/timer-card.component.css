@@ -3,9 +3,14 @@
   padding: 4px 8px;
   border: none;
   font: normal 700 20px 'Lato';
+  color: var(--primary-900);
 }
 
-.btn-pomodoro:hover{
+.btn-pomodoro:disabled{
+  color: var(--primary-400);
+}
+
+.btn-pomodoro-hover:hover, .btn-selected{
   background-color: var(--primary-50);
 }
 
