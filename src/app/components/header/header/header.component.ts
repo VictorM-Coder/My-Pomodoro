@@ -9,14 +9,11 @@ import {FormControl, FormGroup, NgForm} from "@angular/forms";
 })
 export class HeaderComponent {
   timerPomodoro:TimePomodoro = new TimePomodoro();
-  pomodoroValue:number = this.timerPomodoro.getPomodoroValue();
-  shortBreakValue:number = this.timerPomodoro.getShortBreakValue();
-  longBreakValue:number = this.timerPomodoro.getLongBreakValue();
 
   formSettings: FormGroup = new FormGroup({
-    pomodoroInput: new FormControl(this.pomodoroValue),
-    shortBreakInput: new FormControl(this.shortBreakValue),
-    longBreakInput: new FormControl(this.longBreakValue),
+    pomodoroInput: new FormControl(this.timerPomodoro.getPomodoroValue()),
+    shortBreakInput: new FormControl(this.timerPomodoro.getShortBreakValue()),
+    longBreakInput: new FormControl(this.timerPomodoro.getLongBreakValue()),
   });
 
   @ViewChild('modalSettings', {static: true}) modalSettings!: ElementRef<HTMLDivElement>;
@@ -28,11 +25,10 @@ export class HeaderComponent {
   }
 
   clearModal(){
-    console.log(this.formSettings)
     this.formSettings.reset({
-      pomodoroInput: this.pomodoroValue,
-      shortBreakInput: this.shortBreakValue,
-      longBreakInput: this.longBreakValue
+      pomodoroInput: this.timerPomodoro.getPomodoroValue(),
+      shortBreakInput: this.timerPomodoro.getShortBreakValue(),
+      longBreakInput: this.timerPomodoro.getLongBreakValue()
     })
   }
 }
