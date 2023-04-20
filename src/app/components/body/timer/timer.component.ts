@@ -19,7 +19,18 @@ export class TimerComponent {
   }
 
   getProgressPercent(){
+    this.printTime()
     return 100 - (100 * (this.minutes * 60 + this.seconds)/(this.pomodoroValue * 60))
+  }
+
+  printTime(){
+    const date = new Date();
+    date.setHours(0, this.minutes, this.seconds);
+    const dataF = date.toLocaleTimeString('pt-BR', {
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    return dataF;
   }
 
   restart(){
