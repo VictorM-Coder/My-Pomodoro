@@ -1,27 +1,119 @@
-# MeuPomodoro
+---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+<h1 align="center">
+    ⏲️MyPomodoro⏲️
+</h1>
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 💻 Sobre o projeto
 
-## Code scaffolding
+⏲️ MyPomodoro - É um projeto web para ajudar pessoas que desejam melhorar o gerenciamento do seu tempo
+Este projeto foi desenvolvido utilizando Angular, typeScript e Bootstrap. Suas funcionalidades são voltadas para manutenção do tempo e controle de pequenas tarefas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ⚙️ Funcionalidades
 
-## Build
+- Acompanhar um cronometro para fragmentção do tempo
+- Alterar configurações do tempo de cada estágio do pomodoro para melhor se adaptar ao usuário
+- Gerenciar tarefas simples para o acompanhento de sua execução
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🎨 Layout
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="/images/home.png" width="400px">
 
-## Running end-to-end tests
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="/images/register.png" width="400px">
+</p>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🚀 Como executar o projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este projeto é divido em duas partes:
+1. [Backend](https://github.com/VictorM-Coder/PET-Manager--back-end) 
+2. [Frontend](https://github.com/VictorM-Coder/PET-Manager--front-end)
+
+💡Para que o frontend execute corretamente é necessário que o backend esteja executando
+
+### Pré-requisitos
+- Java JDK 13
+- Maven
+- Spring Boot
+- Servidor MySQL (as configurações e propriedades podem ser atualizadas)
+
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+#### 🎲 Configurando o Backend (servidor)
+
+```bash
+
+# Clone este repositório
+$ git clone https://github.com/VictorM-Coder/PET-Manager--back-end.git
+
+# Configure o arquivo properties com os dados do seu servidor
+spring.datasource.url= <url>
+spring.datasource.username= <user>
+spring.datasource.password= <password>
+
+# Inicie a aplicação
+
+# O servidor inciará na porta:8080 - acesse http://localhost:8080 
+
+```
+
+#### 🧭 Rodando a aplicação web (Frontend)
+
+```bash
+
+# Clone este repositório
+$ git clone https://github.com/VictorM-Coder/PET-Manager--front-end.git
+
+# Acesse a pasta do projeto e inicie a aplicação com
+$ ng serve
+
+# A aplicação será aberta na porta:4200 - acesse http://localhost:4200
+
+```
+
+---
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Frontend** 
+
+-   **[Angular](https://angular.io)**
+-   **[TypeScript](https://www.typescriptlang.org)**
+-   **[Dell Design System](delldesignsystem.com)**
+-   **[Bootstrap](https://getbootstrap.com)**
+
+#### **Backend**
+
+-   **[Java Persistense API](https://docs.oracle.com/javaee/6/tutorial/doc/bnbpz.html)**
+-   **[Spring Boot](https://spring.io/projects/spring-boot)**
+-   **[MySQL](https://www.mysql.com)**
+
+#### **Utilitários**
+
+-   Protótipo:  **[Figma](https://www.figma.com/)**
+-   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)** & **[Intellij IDEA](https://www.jetbrains.com/pt-br/idea/)**
+-   Teste de API:  **[Insomnia](https://insomnia.rest/)**
+-   Fontes:  **[Roboto](https://fonts.google.com/specimen/Roboto)**
+
+---
+
+## ✌️ Autor
+
+[Victor Martins](https://github.com/VictorM-Coder)
+<div>
+  <a href="https://www.instagram.com/iam_victor.martins/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a> 
+  <a href="https://www.linkedin.com/in/victor-martins-230864233/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a> 
+
+  ---
+  
+## 📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
