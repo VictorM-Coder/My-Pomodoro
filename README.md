@@ -16,8 +16,6 @@ Este projeto foi desenvolvido utilizando Angular, typeScript e Bootstrap. Suas f
 ## 🤔 O que é pomodoro?
 A técnica Pomodoro é um método desenvolvido para o gerenciamento de tempo. Ela consiste na utilização de um cronômetro para divisão do tempo em períodos constantes de trabalho (geralmente de 25 minutos), separados por breves intervalos (normalmente de 5 minutos). Seu objetivo é melhorar o aproveitamento do tempo e reduzir o desgaste mental.
 
----
-
 ## 🎨 Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
@@ -41,8 +39,6 @@ $ ng serve
 
 ```
 
----
-
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
@@ -59,17 +55,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   Editor: **[WebStorm IDEA](https://www.jetbrains.com/webstorm/)**
 -   Fontes:  **[Lato](https://fonts.google.com/specimen/Lato)**
 
----
-
 ## ✌️ Autor
 
 [Victor Martins](https://github.com/VictorM-Coder)
 <div>
   <a href="https://www.instagram.com/iam_victor.martins/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a> 
   <a href="https://www.linkedin.com/in/victor-martins-230864233/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a> 
-
-  ---
-  
-## 📝 Licença
-
-Este projeto esta sobe a licença [MIT](./LICENSE).
