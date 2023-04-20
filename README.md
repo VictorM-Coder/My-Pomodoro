@@ -1,10 +1,6 @@
----
-
 <h1 align="center">
     ⏲️MyPomodoro⏲️
 </h1>
-
----
 
 ## 💻 Sobre o projeto
 
@@ -17,60 +13,28 @@ Este projeto foi desenvolvido utilizando Angular, typeScript e Bootstrap. Suas f
 - Alterar configurações do tempo de cada estágio do pomodoro para melhor se adaptar ao usuário
 - Gerenciar tarefas simples para o acompanhento de sua execução
 
+## 🤔 O que é pomodoro?
+A técnica Pomodoro é um método desenvolvido para o gerenciamento de tempo. Ela consiste na utilização de um cronômetro para divisão do tempo em períodos constantes de trabalho (geralmente de 25 minutos), separados por breves intervalos (normalmente de 5 minutos). Seu objetivo é melhorar o aproveitamento do tempo e reduzir o desgaste mental.
+
 ---
 
 ## 🎨 Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="/images/home.png" width="400px">
-
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="/images/register.png" width="400px">
+  <img alt="tela" src="imagem_2023-04-20_144512941.png" width="100%">
 </p>
-
----
 
 ## 🚀 Como executar o projeto
 
-Este projeto é divido em duas partes:
-1. [Backend](https://github.com/VictorM-Coder/PET-Manager--back-end) 
-2. [Frontend](https://github.com/VictorM-Coder/PET-Manager--front-end)
-
-💡Para que o frontend execute corretamente é necessário que o backend esteja executando
-
-### Pré-requisitos
-- Java JDK 13
-- Maven
-- Spring Boot
-- Servidor MySQL (as configurações e propriedades podem ser atualizadas)
-
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-
-#### 🎲 Configurando o Backend (servidor)
-
 ```bash
 
 # Clone este repositório
-$ git clone https://github.com/VictorM-Coder/PET-Manager--back-end.git
+$ git clone https://github.com/VictorM-Coder/My-Pomodoro.git
 
-# Configure o arquivo properties com os dados do seu servidor
-spring.datasource.url= <url>
-spring.datasource.username= <user>
-spring.datasource.password= <password>
+# Acesse a pasta do projeto e instale os pacotes necessários
+$ npm i
 
-# Inicie a aplicação
-
-# O servidor inciará na porta:8080 - acesse http://localhost:8080 
-
-```
-
-#### 🧭 Rodando a aplicação web (Frontend)
-
-```bash
-
-# Clone este repositório
-$ git clone https://github.com/VictorM-Coder/PET-Manager--front-end.git
-
-# Acesse a pasta do projeto e inicie a aplicação com
+# Inicie a aplicação com
 $ ng serve
 
 # A aplicação será aberta na porta:4200 - acesse http://localhost:4200
@@ -87,21 +51,13 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 -   **[Angular](https://angular.io)**
 -   **[TypeScript](https://www.typescriptlang.org)**
--   **[Dell Design System](delldesignsystem.com)**
 -   **[Bootstrap](https://getbootstrap.com)**
-
-#### **Backend**
-
--   **[Java Persistense API](https://docs.oracle.com/javaee/6/tutorial/doc/bnbpz.html)**
--   **[Spring Boot](https://spring.io/projects/spring-boot)**
--   **[MySQL](https://www.mysql.com)**
 
 #### **Utilitários**
 
 -   Protótipo:  **[Figma](https://www.figma.com/)**
--   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)** & **[Intellij IDEA](https://www.jetbrains.com/pt-br/idea/)**
--   Teste de API:  **[Insomnia](https://insomnia.rest/)**
--   Fontes:  **[Roboto](https://fonts.google.com/specimen/Roboto)**
+-   Editor: **[WebStorm IDEA](https://www.jetbrains.com/webstorm/)**
+-   Fontes:  **[Lato](https://fonts.google.com/specimen/Lato)**
 
 ---
 
