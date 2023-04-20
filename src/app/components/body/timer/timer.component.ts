@@ -68,7 +68,10 @@ export class TimerComponent {
   private decrementTime(){
     if (this.seconds === 0){
       if (this.minutes >= 1) this.seconds = 59
-      if (this.minutes === 0 && this.seconds === 0) clearInterval(this.timerInterval)
+      if (this.minutes === 0 && this.seconds === 0) {
+        this.playAlarm();
+        this.nextPomodoro()
+      }
       else this.minutes--
     }else{
       this.seconds--;
@@ -81,5 +84,10 @@ export class TimerComponent {
     if (this.timerInterval){
       clearInterval(this.timerInterval);
     }
+  }
+
+  private playAlarm(){
+    const audio = new Audio('assets/call-to-attention-123107.mp3')
+    audio.play();
   }
 }
