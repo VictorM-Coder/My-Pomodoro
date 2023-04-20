@@ -44,6 +44,11 @@ export class TaskBarComponent {
     this.taskRepository.update(task);
   }
 
+  deleteAllTasks(){
+    this.listTasks.forEach(value => this.taskRepository.delete(value));
+    this.listTasks = [];
+  }
+
   deleteTask(task:Task){
     let taskIndex = this.listTasks.indexOf(task)
     this.listTasks.splice(taskIndex, 1);

@@ -20,3 +20,15 @@
 .btn-add-task:hover{
   background-color: #D6B5F7;
 }
+
+.dropdown-toggle::after {
+  display:none;
+}
+
+.dropdown-item:hover{
+  background-color: var(--primary-50);
+}
+
+.dropdown-item:active{
+  background-color: var(--primary-600);
+}

@@ -7,6 +7,7 @@ import { TimerComponent } from './body/timer/timer.component';
 import { TaskBarComponent } from './body/task-bar/task-bar.component';
 import { TaskComponent } from './body/task/task.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle} from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -18,11 +19,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     TaskBarComponent,
     TaskComponent
   ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbDropdownToggle,
+    NgbDropdown,
+    NgbDropdownMenu,
+    NgbDropdownItem
+  ],
   exports: [
     HeaderComponent,
     BodyComponent

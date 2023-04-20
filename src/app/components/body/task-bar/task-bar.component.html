@@ -2,11 +2,17 @@
   <div class="row gx-0">
     <div class="task-hearder col-12 background-white default-border-radius defult-shadow d-flex justify-content-between align-items-center">
       <h1>Tasks</h1>
-      <button class="btn-icon">
-        <span class="material-symbols-rounded icon-menu">
-          more_vert
-        </span>
-      </button>
+      <div ngbDropdown class="dropdown">
+        <button class="btn-icon" ngbDropdownToggle id="dropdownMenuButton1" aria-expanded="false">
+          <span class="material-symbols-rounded icon-menu">
+            more_vert
+          </span>
+        </button>
+
+        <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1">
+          <li><button ngbDropdownItem (click)="deleteAllTasks()">Delete All Tasks</button></li>
+        </ul>
+      </div>
     </div>
 
     <div class="col-12" *ngFor="let task of listTasks">
@@ -71,7 +77,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" #cancelButtonEdit>Cancel</button>
-        <button type="button" class="btn btn-primary" (click)="confirmEdit()">Add Task</button>
+        <button type="button" class="btn btn-primary" (click)="confirmEdit()">Update Task</button>
       </div>
     </div>
   </div>
