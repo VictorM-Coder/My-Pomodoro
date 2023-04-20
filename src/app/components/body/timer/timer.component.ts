@@ -13,9 +13,15 @@ export class TimerComponent {
   timerRunning:boolean = false;
 
   @Output() changeStateTimer = new EventEmitter<any>();
+  @Output() nextPomodoroTimer = new EventEmitter();
 
   ngOnChanges(changes: SimpleChanges) {
     this.resetTimer();
+  }
+
+  nextPomodoro(){
+    this.restart()
+    this.nextPomodoroTimer.emit();
   }
 
   getProgressPercent(){

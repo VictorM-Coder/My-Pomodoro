@@ -11,7 +11,8 @@
     <span class="material-symbols-rounded">replay</span>
   </button>
   <button (click)="startPause()" class="btn-system btn-start mx-2em" [innerText]="timerRunning?'pause': 'start'"></button>
-  <button class="btn-system">
+
+  <button class="btn-system" (click)="nextPomodoro()">
     <span class="material-symbols-rounded">skip_next</span>
   </button>
 </div>

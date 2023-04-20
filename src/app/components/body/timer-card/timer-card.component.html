@@ -10,5 +10,5 @@
       <button (click)="setLongBreak()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===2" [disabled]="disableButtons" class="btn-pomodoro default-border-radius">Long break</button>
     </span>
   </div>
-  <app-timer #timerComponent [pomodoroValue]="valuePomodoro" (changeStateTimer)="onStateChanceTimer()"></app-timer>
+  <app-timer #timerComponent [pomodoroValue]="valuePomodoro" (nextPomodoroTimer)="nextPomodoro()" (changeStateTimer)="onStateChanceTimer()"></app-timer>
 </div>

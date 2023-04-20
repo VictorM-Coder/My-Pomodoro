@@ -1,4 +1,4 @@
-import {Component, SimpleChanges, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {TimePomodoro} from "../../../model/time-pomodoro";
 import {TimerComponent} from "../timer/timer.component";
 import {TypePomodoro} from "../../../model/TypePomodoro";
@@ -19,6 +19,16 @@ export class TimerCardComponent {
     this.timePomodoro = new TimePomodoro();
     this.valuePomodoro = this.timePomodoro.getPomodoroValue()
     this.typePomodoro = TypePomodoro.POMODORO;
+  }
+
+  nextPomodoro(){
+    if (this.typePomodoro === TypePomodoro.POMODORO){
+      this.setShortBreak()
+    }else if (this.typePomodoro === TypePomodoro.SHORT_BREAK){
+      this.setLongBreak()
+    }else {
+      this.setPomodoro()
+    }
   }
 
   refreshTimer(){
