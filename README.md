@@ -4,7 +4,7 @@
 
 ## 💻 Sobre o projeto
 
-⏲️ MyPomodoro - É um projeto web para ajudar pessoas que desejam melhorar o gerenciamento do seu tempo
+⏲️ MyPomodoro - É um projeto web para ajudar pessoas que desejam melhorar o gerenciamento do seu tempo.
 Este projeto foi desenvolvido utilizando Angular, typeScript e Bootstrap. Suas funcionalidades são voltadas para manutenção do tempo e controle de pequenas tarefas.
 
 ## ⚙️ Funcionalidades
