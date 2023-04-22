@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 :root{
   --primary-900: #410D76;
@@ -130,6 +130,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bi{
+  letter-spacing: 0;
 }
 
 .btn-icon:hover{

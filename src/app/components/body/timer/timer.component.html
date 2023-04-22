@@ -8,11 +8,11 @@
 </div>
 <div class="d-flex mg-top-32 justify-content-center">
   <button (click)="restart()" class="btn-system">
-    <span class="material-symbols-rounded">replay</span>
+    <i class="bi bi-arrow-clockwise bi-1x"></i>
   </button>
   <button (click)="startPause()" class="btn-system btn-start mx-2em" [innerText]="timerRunning?'pause': 'start'"></button>
 
   <button class="btn-system" (click)="nextPomodoro()">
-    <span class="material-symbols-rounded">skip_next</span>
+    <i class="bi bi-skip-end-fill"></i>
   </button>
 </div>
