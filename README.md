@@ -1,27 +1,63 @@
-# MeuPomodoro
+<h1 align="center">
+    ⏲️MyPomodoro⏲️
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+## 💻 Sobre o projeto
 
-## Development server
+⏲️ MyPomodoro - É um projeto web para ajudar pessoas que desejam melhorar o gerenciamento do seu tempo.
+Este projeto foi desenvolvido utilizando Angular, typeScript e Bootstrap. Suas funcionalidades são voltadas para manutenção do tempo e controle de pequenas tarefas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ⚙️ Funcionalidades
 
-## Code scaffolding
+- Acompanhar um cronometro para fragmentção do tempo
+- Alterar configurações do tempo de cada estágio do pomodoro para melhor se adaptar ao usuário
+- Gerenciar tarefas simples para o acompanhento de sua execução
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🤔 O que é pomodoro?
+A técnica Pomodoro é um método desenvolvido para o gerenciamento de tempo. Ela consiste na utilização de um cronômetro para divisão do tempo em períodos constantes de trabalho (geralmente de 25 minutos), separados por breves intervalos (normalmente de 5 minutos). Seu objetivo é melhorar o aproveitamento do tempo e reduzir o desgaste mental.
 
-## Build
+## 🎨 Layout
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="tela" src="imagem_2023-04-20_144512941.png" width="100%">
+</p>
 
-## Running unit tests
+## 🚀 Como executar o projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
 
-## Running end-to-end tests
+# Clone este repositório
+$ git clone https://github.com/VictorM-Coder/My-Pomodoro.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Acesse a pasta do projeto e instale os pacotes necessários
+$ npm i
 
-## Further help
+# Inicie a aplicação com
+$ ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# A aplicação será aberta na porta:4200 - acesse http://localhost:4200
+
+```
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Frontend** 
+
+-   **[Angular](https://angular.io)**
+-   **[TypeScript](https://www.typescriptlang.org)**
+-   **[Bootstrap](https://getbootstrap.com)**
+
+#### **Utilitários**
+
+-   Protótipo:  **[Figma](https://www.figma.com/)**
+-   Editor: **[WebStorm IDEA](https://www.jetbrains.com/webstorm/)**
+-   Fontes:  **[Lato](https://fonts.google.com/specimen/Lato)**
+
+## ✌️ Autor
+
+[Victor Martins](https://github.com/VictorM-Coder)
+<div>
+  <a href="https://www.instagram.com/iam_victor.martins/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a> 
+  <a href="https://www.linkedin.com/in/victor-martins-230864233/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a> 
