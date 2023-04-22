@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, HostListener, ViewChild} from '@angular/core';
 import {TimePomodoro} from "../../../model/time-pomodoro";
 import {TimerComponent} from "../timer/timer.component";
 import {TypePomodoro} from "../../../model/TypePomodoro";
@@ -14,6 +14,23 @@ export class TimerCardComponent {
   typePomodoro: TypePomodoro;
   valuePomodoro:number;
   disableButtons:boolean = false;
+
+  textPomodoro:string = "Pomodoro";
+  textShortBreak:string = "Short Break";
+  textLongBreak:string = "Long Break";
+
+  @HostListener('window:resize', ['$event'])
+  ngOnResize(event: { target: { innerWidth: number; }; }){
+    if (event.target.innerWidth < 480){
+      this.textPomodoro = "Pomo";
+      this.textLongBreak = "Long";
+      this.textShortBreak = "Short";
+    }else{
+      this.textPomodoro = "Pomodoro";
+      this.textLongBreak = "Long Break";
+      this.textShortBreak = "Short Break";
+    }
+  }
 
   constructor() {
     this.timePomodoro = new TimePomodoro();

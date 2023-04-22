@@ -1,3 +1,7 @@
+.item-pomodoro{
+  flex: 1;
+}
+
 .progress-background{
   height: 200px;
   width: 200px;
@@ -19,6 +23,8 @@
 }
 
 .btn-start{
+  padding-left: 16px;
+  padding-right: 16px;
   width: 200px;
   margin: 0 2em;
 }

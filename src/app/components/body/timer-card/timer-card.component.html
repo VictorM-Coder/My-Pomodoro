@@ -1,14 +1,16 @@
-<div class="background-white defult-shadow d-flex flex-column default-border-radius card-padding">
-  <div class="d-flex justify-content-center">
-    <span>
-      <button (click)="setPomodoro()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===0"  [disabled]="disableButtons" class="btn-pomodoro mg-right-20 default-border-radius">Pomodoro</button>
+<div class="background-white defult-shadow default-border-radius card-padding">
+  <div class="container-fluid card-size p-0">
+    <div class="row justify-content-between align-items-center">
+    <span class="col-4 d-flex justify-content-start">
+      <button (click)="setPomodoro()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===0"  [disabled]="disableButtons" class="btn-pomodoro default-border-radius">{{textPomodoro}}</button>
     </span>
-    <span>
-      <button (click)="setShortBreak()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===1" [disabled]="disableButtons" class="btn-pomodoro mg-right-20 default-border-radius">Short break</button>
+      <span class="col-4 d-flex justify-content-center">
+      <button (click)="setShortBreak()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===1" [disabled]="disableButtons" class="btn-pomodoro default-border-radius">{{textShortBreak}}</button>
     </span>
-    <span>
-      <button (click)="setLongBreak()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===2" [disabled]="disableButtons" class="btn-pomodoro default-border-radius">Long break</button>
+      <span class="col-4 d-flex justify-content-end">
+      <button (click)="setLongBreak()" [class.btn-pomodoro-hover]="!disableButtons" [class.btn-selected]="this.typePomodoro===2" [disabled]="disableButtons" class="btn-pomodoro default-border-radius">{{textLongBreak}}</button>
     </span>
+    </div>
   </div>
   <app-timer #timerComponent [pomodoroValue]="valuePomodoro" (nextPomodoroTimer)="nextPomodoro()" (changeStateTimer)="onStateChanceTimer()"></app-timer>
 </div>

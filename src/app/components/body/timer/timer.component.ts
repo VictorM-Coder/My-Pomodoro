@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, HostListener, Input, Output, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-timer',
