@@ -19,7 +19,7 @@ A técnica Pomodoro é um método desenvolvido para o gerenciamento de tempo. El
 ## 🎨 Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="tela" src="imagem_2023-04-20_144512941.png" width="100%">
+  <img alt="tela" src="imagem_2023-04-24_082217492.png" width="100%">
 </p>
 
 ## 🚀 Como executar o projeto
